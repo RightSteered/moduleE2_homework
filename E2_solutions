@@ -1,0 +1,86 @@
+let a = +prompt("Enter a");
+typeof a;
+console.log(typeof a, a);
+if (a==NaN){
+  console.log("Упс, ошибочка")
+} else {
+  if (a%2==0){
+    console.log("это чётное число")
+  } else {
+    console.log("Это нечётное число")
+  }
+}
+
+let a;
+console.log(typeof a);
+switch (typeof a){
+  case "number":
+    console.log("This is a number");
+    break;
+  case "string":
+    console.log("This is a string");
+    break;
+  case "boolean":
+    console,log("This is a boolean");
+    break;
+  case "undefined":
+    console.log("Type undefined");
+}
+
+let message = "Hello world";
+console.log(message.split("").reverse().join(""));
+
+let num = (Math.random());
+console.log(Math.round(num*=100));
+
+
+let array=[2, "element", true, 42]
+console.log(Array.isArray(array))
+console.log(array.length)
+array.forEach(a => console.log(a))
+
+
+let array=[2, "element", true, 42, 53, null, 4]
+let nums = 0;
+let strings = 0;
+let bools = 0;
+let undefs = 0;
+for(a=0; a<array.length; a++){
+  switch(typeof(array[a])){
+    case "number":
+      nums +=1;
+      break;
+    case "string":
+      strings +=1;
+      break;
+    case "boolean":
+      bools +=1;
+      break;
+    case "undefined":
+      undefs +=1;
+      break;
+         }
+      };
+if (nums>0||strings>0||bools>0||undefs>0){
+  console.log(true);
+}
+
+
+let array=[2, "element", true, 42, 53, null, 4]
+let evenNums = 0;
+let notEvenNums = 0;
+let zeroes = 0;
+let others = 0;
+for(a=0; a<array.length; a++){
+  if (typeof(array[a])=="number"){
+    if (array[a] == 0){
+      zeroes +=1
+    }else if (array[a]%2 != 0){
+      notEvenNums +=1
+    } else if (array[a]%2 == 0){
+      evenNums +=1
+    }
+  }else{
+    others +=1 
+  }
+}
