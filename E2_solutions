@@ -1,3 +1,5 @@
+задание 1
+
 let a = +prompt("Enter a");
 typeof a;
 console.log(typeof a, a);
@@ -10,6 +12,8 @@ if (a==NaN){
     console.log("Это нечётное число")
   }
 }
+
+задание 2
 
 let a;
 console.log(typeof a);
@@ -27,18 +31,24 @@ switch (typeof a){
     console.log("Type undefined");
 }
 
+задание 3
+
 let message = "Hello world";
 console.log(message.split("").reverse().join(""));
+
+задание 4
 
 let num = (Math.random());
 console.log(Math.round(num*=100));
 
+задание 5
 
 let array=[2, "element", true, 42]
 console.log(Array.isArray(array))
 console.log(array.length)
 array.forEach(a => console.log(a))
 
+задание 6
 
 let array=[2, "element", true, 42, 53, null, 4]
 let nums = 0;
@@ -65,6 +75,7 @@ if (nums>0||strings>0||bools>0||undefs>0){
   console.log(true);
 }
 
+задание 7
 
 let array=[2, "element", true, 42, 53, null, 4]
 let evenNums = 0;
@@ -83,4 +94,16 @@ for(a=0; a<array.length; a++){
   }else{
     others +=1 
   }
+}
+
+задание 8
+
+let map = new Map([
+  ["one", "first"],
+  ["two", "second"],
+  ["three", "third"],
+  ["four", "fourth"]
+]);
+for (let a of map.keys()){
+  console.log ("key = "+ a + ", value = " + map.get(a));
 }
